@@ -23,7 +23,7 @@ const MethodAbm = () => {
 
     costs.forEach((item) => {
       const unityVariableCost = item.variableCost / unidadesProducidas;
-      const costoTotal = parseFloat(fixedOne) + parseFloat(fixedTwo) + (unityVariableCost * unidadesProducidas);
+      const costoTotal = parseFloat(fixedOne as any) + parseFloat(fixedTwo as any) + (unityVariableCost * unidadesProducidas);
       costosTotales.push({ actividad: item.activity, costo: costoTotal });
       costoTotalPorUnidad += costoTotal;
     });
@@ -33,7 +33,7 @@ const MethodAbm = () => {
       costo: item.costo / unidadesProducidas
     }));
     const costoNoAgregado = costs.reduce((accumulator, object) => {
-      return accumulator + parseFloat(object?.variableCost);
+      return accumulator + parseFloat(object?.variableCost as any);
     }, 0);
     const costoAgregado = costoTotalPorUnidad - costoNoAgregado;
     const porcentajeCostoAgregado = (costoAgregado / costoTotalPorUnidad) * 100;
@@ -44,7 +44,7 @@ const MethodAbm = () => {
     costosUnitarios.forEach((item: any) => {
       console.log(item.actividad + ": " + item.costo);
     });
-    setData({ costosTotales, costosUnitarios,  costoTotalPorUnidad, costoAgregado, porcentajeCostoAgregado: Number.parseFloat(porcentajeCostoAgregado).toFixed(2)});
+    setData({ costosTotales, costosUnitarios,  costoTotalPorUnidad, costoAgregado, porcentajeCostoAgregado: Number.parseFloat(porcentajeCostoAgregado as any).toFixed(2)});
     setOpen(true);
   };
   const handleInputChange = (event: any) => {

@@ -16,9 +16,9 @@ const CocomoOne = () => {
     const calculatedDuration = 3.67 * Math.pow(calculatedEffort, 0.28);
     const calculatedCost = calculatedEffort * cost;
 
-    setEffort(calculatedEffort.toFixed(2));
-    setDuration(calculatedDuration.toFixed(2));
-    setCost(calculatedCost.toFixed(2));
+    setEffort(calculatedEffort.toFixed(2) as any);
+    setDuration(calculatedDuration.toFixed(2) as any);
+    setCost(calculatedCost.toFixed(2) as any);
   };
 
   return (

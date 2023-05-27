@@ -26,7 +26,7 @@ const MethodAbc = () => {
     const costosTotales = new Array();
     costs.forEach((item: any) => {
       const costoVariablePorUnidad = item.variableCost / unidadesProducidas;
-      const costoTotal = parseFloat(fixedOne) +parseFloat(fixedTwo) + (costoVariablePorUnidad * unidadesProducidas);
+      const costoTotal = parseFloat(fixedOne as any) +parseFloat(fixedTwo as any) + (costoVariablePorUnidad * unidadesProducidas);
       costosTotales.push({ actividad: item.activity, costoTotal })
     })
 
@@ -38,7 +38,7 @@ const MethodAbc = () => {
     const costosUnitarios = new Array();
 
     costosTotales.forEach(({ actividad, costoTotal }) => {
-      const costoUnitario = parseFloat(costoTotal) / parseFloat(unidadesProducidas);
+      const costoUnitario = parseFloat(costoTotal) / parseFloat(unidadesProducidas as any);
       costosUnitarios.push({ actividad, costoUnitario });
     })
 
