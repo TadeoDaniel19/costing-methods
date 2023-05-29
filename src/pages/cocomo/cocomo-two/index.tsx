@@ -30,7 +30,7 @@ const CosteoCocomoII = () => {
     <div className="min-h-screen w-full bg-gray-100 text-black">
       <Navigation />
       <div className="container flex flex-col justify-center pt-10">
-        <span className="text-center font-bold text-2xl w-full">Modelo COCOMO I</span>
+        <span className="text-center font-bold text-2xl w-full">Modelo COCOMO II</span>
         <p className="text-justify text-lg pt-5">
           Modelo que permite estimar el costo, esfuerzo, y programar la hora de planificar una nueva actividad de desrrollo de software.
         </p>
