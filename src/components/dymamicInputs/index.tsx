@@ -30,7 +30,7 @@ const DynamicInputs = (props: any) => {
               label={`Actividad ${i + 1}`}
               name="activity"
               value={el.activity || ""}
-              color="purple"
+              color="orange"
               onChange={e => handleChange(i, e)}
             />
           </div>
@@ -39,7 +39,7 @@ const DynamicInputs = (props: any) => {
               label={`Costo variable ${i + 1}`}
               name="variableCost"
               value={el.variableCost || ""}
-              color="purple"
+              color="orange"
               type="number"
               onChange={e => handleChange(i, e)}
             />
@@ -63,7 +63,7 @@ const DynamicInputs = (props: any) => {
       ))}
       {
         !users?.length && (
-          <Button color="purple" variant="text" onClick={addClick}>Agregar Costo</Button>
+          <Button color="orange" variant="text" onClick={addClick}>Agregar Costo</Button>
         )
       }
     </div>

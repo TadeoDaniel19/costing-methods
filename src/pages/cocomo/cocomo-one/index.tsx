@@ -43,7 +43,7 @@ const CocomoOne = () => {
           value={cost}
           onChange={(e) => setCost(parseFloat(e.target.value))}
         />
-        <Button  color="purple" onClick={calculateCost}>Calcular</Button>
+        <Button  color="orange" onClick={calculateCost}>Calcular</Button>
         <Dialog open={open} handler={handleOpen}>
         <DialogHeader>Resultados</DialogHeader>
         <DialogBody divider id='modalBody' className='flex flex-col'>
@@ -52,7 +52,7 @@ const CocomoOne = () => {
           <span className='font-bold text-lg py-2'>{`Costo: $ ${cost}`}</span>
         </DialogBody>
         <DialogFooter className='gap-3 flex justify-center'>
-          <Button variant="gradient" color="purple" onClick={() => {
+          <Button variant="gradient" color="orange" onClick={() => {
             handleOpen();
             setEffort(0);
             setDuration(0);

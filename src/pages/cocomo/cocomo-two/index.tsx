@@ -43,7 +43,7 @@ const CosteoCocomoII = () => {
           value={linesOfCode}
           onChange={(e) => setLinesOfCode(e.target.value)}
         />
-        <Button color="purple" onClick={calculateCost}>Calcular costo</Button>
+        <Button color="orange" onClick={calculateCost}>Calcular costo</Button>
         <Dialog open={open} handler={handleOpen}>
           <DialogHeader>Resultados</DialogHeader>
           <DialogBody divider id='modalBody' className='flex flex-col'>
@@ -57,7 +57,7 @@ const CosteoCocomoII = () => {
             )}
           </DialogBody>
           <DialogFooter className='gap-3 flex justify-center'>
-            <Button variant="gradient" color="purple" onClick={() => {
+            <Button variant="gradient" color="orange" onClick={() => {
               handleOpen();
             }}>
               <span>Cerrar</span>

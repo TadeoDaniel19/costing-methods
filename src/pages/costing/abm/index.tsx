@@ -67,7 +67,7 @@ const MethodAbm = () => {
         <div className='w-1/2'>
           <Input
             type="number"
-            color="purple"
+            color="orange"
             label='costo fijo 1'
             value={fixedOne}
             onChange={(e: any) => setfixedOne(e?.target?.value)}
@@ -76,7 +76,7 @@ const MethodAbm = () => {
         <div className='w-1/2'>
           <Input
             type="number"
-            color="purple"
+            color="orange"
             label='costo fijo 2'
             value={fixedTwo}
             onChange={(e: any) => setfixedTwo(e?.target?.value)}
@@ -85,13 +85,13 @@ const MethodAbm = () => {
         <div className='w-1/2'>
           <Input
             type="number"
-            color="purple"
+            color="orange"
             label='Unidades producidas'
             value={unidadesProducidas}
             onChange={handleInputChange}
           />
         </div>
-        <Button onClick={calcularCostos} color="purple" disabled={!unidadesProducidas}>Calcular</Button>
+        <Button onClick={calcularCostos} color="orange" disabled={!unidadesProducidas}>Calcular</Button>
       </div>
       <Dialog open={open} handler={handleOpen}>
         <DialogHeader>Resultados</DialogHeader>
@@ -117,7 +117,7 @@ const MethodAbm = () => {
           <span className='font-bold text-lg py-2'>{`El porcentaje del costo total agregado es: : ${data?.porcentajeCostoAgregado}%`}</span>
         </DialogBody>
         <DialogFooter className='gap-3 flex justify-center'>
-          <Button variant="gradient" color="purple" onClick={() => {
+          <Button variant="gradient" color="orange" onClick={() => {
             handleOpen();
           }}>
             <span>Cerrar</span>

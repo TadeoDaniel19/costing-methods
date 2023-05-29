@@ -11,6 +11,7 @@ import {
   MenuItem,
 } from "@material-tailwind/react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navigation() {
   const [openNav, setOpenNav] = useState(false);
@@ -26,7 +27,7 @@ export default function Navigation() {
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Menu>
         <MenuHandler>
-          <Button variant="text" color="purple">Modelos de costeo</Button>
+          <Button variant="text" color="orange">Modelos de costeo</Button>
         </MenuHandler>
         <MenuList>
           <MenuItem>
@@ -40,6 +41,11 @@ export default function Navigation() {
             </Link>
           </MenuItem>
           <MenuItem>
+            <Link href="/costing/tdabc" className="flex items-center">
+              TDABC
+            </Link>
+          </MenuItem>
+          <MenuItem>
             <Link href="/costing/rca" className="flex items-center">
               RCA
             </Link>
@@ -48,7 +54,7 @@ export default function Navigation() {
       </Menu>
       <Menu>
         <MenuHandler>
-          <Button variant="text" color="purple">COCOMO</Button>
+          <Button variant="text" color="orange">COCOMO</Button>
         </MenuHandler>
         <MenuList>
           <MenuItem>
@@ -94,6 +100,16 @@ export default function Navigation() {
       >
         <Link href="/costing/abm" className="flex items-center">
           ABM
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <Link href="/costing/tdabc" className="flex items-center">
+          TDABC
         </Link>
       </Typography>
       <Typography
@@ -148,7 +164,12 @@ export default function Navigation() {
           className="mr-4 cursor-pointer py-1.5 font-bold text-xl"
         >
           <Link href="/" className="flex items-center">
-            Métodos de costeo
+            <Image
+              src="/logo.jpg"
+              width={150}
+              height={100}
+              alt="Logo"
+            />
           </Link>
         </Typography>
         <div className="hidden lg:block">{navList}</div>

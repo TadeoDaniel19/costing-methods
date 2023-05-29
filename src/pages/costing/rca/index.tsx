@@ -98,7 +98,7 @@ const CosteoRCA: React.FC = () => {
           <div key={index}>
             <span className='text-center font-semibold text-base w-full'>Centro de responsabilidad: {costoDirecto.centroResponsabilidad}</span>
             <Input
-              color='purple'
+              color='orange'
               type="number"
               value={costoDirecto.costoDirecto}
               onChange={(e) => handleCostoDirectoChange(e, index)}
@@ -111,7 +111,7 @@ const CosteoRCA: React.FC = () => {
           <div key={index}>
             <span className='text-center font-semibold text-base w-full'>Centro de responsabilidad: {costoIndirecto.centroResponsabilidad}</span>
             <Input
-              color='purple'
+              color='orange'
               type="number"
               value={costoIndirecto.costoIndirecto}
               onChange={(e) => handleCostoIndirectoChange(e, index)}
@@ -121,14 +121,14 @@ const CosteoRCA: React.FC = () => {
         <div className='flex flex-col justify-center gap-3 pb-3'>
           <span className="text-center font-bold text-xl w-full">Unidades de Actividad</span>
           <Input
-            color='purple'
+            color='orange'
             type="number"
             value={unidadesActividad}
             onChange={(e) => setUnidadesActividad(parseFloat(e.target.value))}
           />
 
         </div>
-        <Button color='purple' className="" onClick={() => {
+        <Button color='orange' className="" onClick={() => {
           setOpen(true);
         }}>Calcular</Button>
 
@@ -145,7 +145,7 @@ const CosteoRCA: React.FC = () => {
           ))}
         </DialogBody>
         <DialogFooter className='gap-3 flex justify-center'>
-          <Button variant="gradient" color="purple" onClick={() => {
+          <Button variant="gradient" color="orange" onClick={() => {
             handleOpen();
           }}>
             <span>Cerrar</span>
